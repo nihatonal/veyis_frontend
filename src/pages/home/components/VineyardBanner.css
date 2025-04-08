@@ -1,0 +1,61 @@
+.vineyard_banner {
+  position: relative;
+  background-image: url("../../../assets/images/vineyard_banner_bg.webp");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: calc(var(--spacing) * 20) 0;
+}
+.vineyard_banner_overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+}
+.vineyard_banner_content {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 calc(var(--spacing) * 6);
+  text-align: center;
+  width: 100%;
+  /* relative container mx-auto px-6 text-center */
+}
+.vineyard_banner_title {
+  /* text-4xl font-bold mb-6 */
+  font-size: var(--text-4xl);
+  font-weight: bold;
+  margin-bottom: calc(var(--spacing) * 6);
+}
+.vineyard_banner_content_items {
+  /* grid md:grid-cols-3 gap-8 mb-8 */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--spacing) * 8);
+  margin-bottom: calc(var(--spacing) * 8);
+}
+.vineyard_banner_content_item {
+  /* p-6 bg-white bg-opacity-10 rounded-lg */
+  padding: calc(var(--spacing) * 6);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  font-size: var(--text-xl);
+  font-weight: 500;
+}
+.vineyard_banner_button {
+  display: inline-block;
+  background-color: var(--color-green-600);
+  padding: calc(var(--spacing) * 3) calc(var(--spacing) * 6);
+  border-radius: 1.5rem;
+  font-weight: 500;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-property: all;
+  /* inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition */
+}
+.vineyard_banner_button:hover {
+  background-color: var(--color-green-700);
+}
+@media screen and (max-width: 576px) {
+  .vineyard_banner_content_items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

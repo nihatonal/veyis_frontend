@@ -1,0 +1,184 @@
+.contact_section_container {
+  background-color: var(--color-gray-100);
+  padding: calc(var(--spacing) * 15) calc(var(--spacing) * 15);
+}
+@media screen and (max-width: 756px) {
+  .contact_section_container {
+    padding: calc(var(--spacing) * 10) calc(var(--spacing) * 2);
+  }
+}
+.contact_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: calc(var(--spacing) * 10);
+  row-gap: calc(var(--spacing) * 4);
+  margin-bottom: calc(var(--spacing) * 10);
+}
+.contact_wrapper .section_title,
+.contact_wrapper .section_subtitle,
+.contact_left_side {
+  grid-column: 1 / span 1;
+}
+/* .contact_content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc(var(--spacing) * 8);
+  margin: calc(var(--spacing) * 10) 0;
+} */
+@media screen and (max-width: 980px) {
+  .contact_wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: calc(var(--spacing) * 6);
+  }
+}
+.contact_items {
+  background-color: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+  padding: calc(var(--spacing) * 6);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: calc(var(--spacing) * 4);
+}
+.contact_item_title {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin-bottom: calc(var(--spacing) * 4);
+  grid-column: 1 / span 2;
+}
+@media screen and (max-width: 1010px) {
+  .contact_items {
+    padding: calc(var(--spacing) * 6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--spacing) * 2);
+    /* bg-white p-6 rounded-2xl shadow-md */
+  }
+}
+.contact_item {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 2);
+  width: 200px;
+}
+.contact_item_link {
+  color: var(--color-gray-700);
+  text-align: center;
+}
+.contact_item_link:hover {
+  text-decoration: underline;
+  color: var(--color-blue-500);
+}
+.contact_item_icon {
+  color: var(--color-green-700);
+  font-size: var(--text-md);
+}
+.contact_item_icon:nth-last-child(1) {
+  color: var(--color-gray-600);
+}
+.contact_item:nth-last-child(3) .contact_item_icon {
+  color: var(--color-stone-600);
+}
+
+.contact_item_socials {
+  grid-column: 1 / span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: calc(var(--spacing) * 4);
+}
+
+.contact_item_socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  padding: 4px;
+  border-radius: var(--rounded-full);
+}
+.contact_item_socials a:hover {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.45);
+}
+.contact_item_social_icon {
+  font-size: var(--text-2xl);
+}
+
+.contact_item_socials a:nth-last-child(1) {
+  color: var(--color-sky-500);
+}
+.contact_item_socials a:nth-last-child(2) {
+  color: #d47b67;
+}
+.contact_item_socials a:nth-last-child(3) {
+  color: var(--color-green-600);
+}
+
+@media screen and (max-width: 1010px) {
+  .contact_items {
+    padding: calc(var(--spacing) * 6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--spacing) * 4);
+  }
+  .contact_item:nth-last-child(3) {
+    margin-left: 0;
+  }
+}
+
+/*contact form*/
+.contact_right_side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
+  grid-column: 2;
+  grid-row: 1 / span 3;
+}
+.contact_form {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: calc(var(--spacing) * 2);
+}
+
+.contact_form .input_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+.contact_form label {
+  margin-bottom: 0;
+  text-align: left;
+}
+.contact_form_btn {
+  background-color: var(--color-green-600);
+  color: #fff;
+  padding: calc(var(--spacing) * 2) calc(var(--spacing) * 8);
+  border-radius: 1.25rem;
+  width: 100%;
+  cursor: pointer;
+  margin-top: calc(var(--spacing) * 2);
+}
+.contact_form_btn:hover {
+  background-color: var(--color-green-700);
+}
+/* w-full bg-green-600 text-white p-2 rounded-lg hover:bg-green-700 */
+
+@media screen and (max-width: 756px) {
+  .contact_right_side {
+    padding: calc(var(--spacing) * 6) calc(var(--spacing) * 2);
+  }
+  .contact_right_side input {
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 2);
+  }
+  .contact_right_side .contact_form .input_wrapper {
+    grid-template-columns: 80px 3fr;
+  }
+}

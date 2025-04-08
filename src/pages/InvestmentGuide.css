@@ -1,0 +1,158 @@
+.investment_guide_items {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: calc(var(--spacing) * 4) calc(var(--spacing) * 10);
+  margin-top: calc(var(--spacing) * 10);
+}
+
+.investment_guide_item:nth-last-child(6) {
+  margin-left: calc(var(--spacing) * 10);
+}
+.investment_guide_item:nth-last-child(5) {
+  margin-left: calc(var(--spacing) * 20);
+}
+
+.investment_guide_item:nth-last-child(4) {
+  margin-left: calc(var(--spacing) * 30);
+}
+.investment_guide_item:nth-last-child(3) {
+  margin-left: calc(var(--spacing) * 40);
+}
+.investment_guide_item:nth-last-child(2) {
+  margin-left: calc(var(--spacing) * 50);
+}
+.investment_guide_item:nth-last-child(1) {
+  margin-left: calc(var(--spacing) * 60);
+}
+.investment_guide_item {
+  display: grid;
+  /* min-width: calc(var(--spacing) * 170); */
+  grid-template-columns: calc(var(--spacing) * 16) 1fr;
+  align-items: center;
+  font-size: var(--text-xl);
+  /* border: 1px solid #cdcddc; */
+  border-radius: 1rem;
+  overflow: hidden;
+  gap: calc(var(--spacing) * 2);
+  /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25); */
+  padding-right: calc(var(--spacing) * 4);
+}
+
+.investment_guide_item span:nth-last-child(2) {
+  padding-top: calc(var(--spacing) * 4);
+}
+
+.investment_guide_item_number {
+  font-size: var(--text-4xl);
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--color-green-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--spacing) * 15);
+  height: calc(var(--spacing) * 15);
+  border-radius: var(--rounded-full);
+  grid-row: 1 / span 2;
+}
+
+.investment_guide_item_desc {
+  padding-left: calc(var(--spacing) * 10);
+  padding-bottom: calc(var(--spacing) * 4);
+  color: var(--color-gray-500);
+  list-style: disc;
+}
+
+@media screen and (max-width: 1080px) {
+  .investment_guide_items {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 756px) {
+  .investment_guide_item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .investment_guide_item_number {
+    height: calc(var(--spacing) * 10);
+    font-size: var(--text-2xl);
+    width: 100%;
+  }
+
+  .investment_guide_item span:nth-last-child(2) {
+    padding-top: calc(var(--spacing) * 4);
+    padding-left: calc(var(--spacing) * 4);
+  }
+
+  .investment_guide_item_title span {
+    font-size: var(--text-md);
+  }
+
+  .investment_guide_item_desc {
+    padding-left: calc(var(--spacing) * 8);
+    padding-right: calc(var(--spacing) * 4);
+  }
+  .investment_guide_item:nth-last-child(6) {
+    margin-left: 0;
+  }
+  .investment_guide_item:nth-last-child(5) {
+    margin-left: 0;
+  }
+
+  .investment_guide_item:nth-last-child(4) {
+    margin-left: 0;
+  }
+  .investment_guide_item:nth-last-child(3) {
+    margin-left: 0;
+  }
+  .investment_guide_item:nth-last-child(2) {
+    margin-left: 0;
+  }
+  .investment_guide_item:nth-last-child(1) {
+    margin-left: 0;
+  }
+}
+
+/* CTA */
+.investment_cta_wrapper {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  padding: calc(var(--spacing) * 16) calc(var(--spacing) * 6);
+  color: #fff;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+  margin-top: calc(var(--spacing) * 12);
+  background-image: url("../assets/images/investement_cta_bg.webp");
+  /* relative bg-cover bg-center py-16 px-6 text-white rounded-lg shadow-lg my-12 */
+}
+.investment_cta_content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: calc(var(--spacing) * 8);
+  border-radius: 1rem;
+  text-align: center;
+}
+.investment_cta_content h2 {
+  font-size: var(--text-3xl);
+  font-weight: bold;
+  margin-bottom: calc(var(--spacing) * 6);
+}
+.investment_cta_content p {
+  font-size: var(--text-lg);
+  font-weight: 500;
+  margin-bottom: calc(var(--spacing) * 6);
+}
+.investment_cta_link {
+  padding: calc(var(--spacing) * 3) calc(var(--spacing) * 6);
+  border-radius: var(--rounded-full);
+  background-color: var(--color-green-600);
+  transition: all 0.3s;
+  /* bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded transition */
+}
+.investment_cta_link:hover {
+  background-color: var(--color-green-700);
+}

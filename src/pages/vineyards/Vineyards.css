@@ -1,0 +1,89 @@
+.vineyards_sections li span {
+  font-weight: 600;
+  color: var(--color-gray-600);
+}
+.vineyards_sections ul li {
+  padding: calc(var(--spacing) * 1) 0;
+  color: var(--color-gray-700);
+}
+.vineyards_sections ul {
+  margin-top: calc(var(--spacing) * 2);
+}
+.climate-soil,
+.harving-methods {
+  display: grid;
+  column-gap: calc(var(--spacing)*6);
+}
+
+.climate-soil .page_desc {
+  grid-column: 1 / span 1;
+}
+.map_image_wrapper {
+  height: calc(var(--spacing) * 100);
+  width: 100%;
+  position: relative;
+  grid-column: 2;
+  grid-row: 1 / span 4;
+  object-fit: cover;
+  overflow: hidden;
+}
+.map_image_wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.harving-methods h3,
+.harving-methods .page_desc {
+  grid-column: 1 / span 2;
+}
+.harving-methods .image_wrapper {
+  margin-right: calc(var(--spacing) * 4);
+  margin-top: calc(var(--spacing) * 4);
+  height: calc(var(--spacing) * 100);
+  grid-column: 1;
+  overflow: hidden;
+}
+.harving-methods img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 980px) {
+  .climate-soil,
+  .harving-methods {
+    display: flex;
+    flex-direction: column;
+  }
+  .climate-soil .map_image_wrapper {
+    margin: calc(var(--spacing) * 3) 0 calc(var(--spacing) * 2);
+  }
+  .map_image_wrapper img,
+  .harving-methods .image_wrapper {
+    height: calc(var(--spacing) * 100);
+    margin: 0;
+    width: 100%;
+    margin-left: 0;
+  }
+  .climate-soil .page_desc:nth-last-child(2) {
+    order: 2;
+  }
+}
+@media screen and (max-width: 756px) {
+  .climate-soil .map_image_wrapper {
+    margin: calc(var(--spacing) * 3) 0 calc(var(--spacing) * 2);
+    height: calc(var(--spacing) * 60);
+  }
+  .map_image_wrapper img {
+    height: calc(var(--spacing) * 60);
+    width: 100%;
+  }
+  .harving-methods .image_wrapper {
+    height: calc(var(--spacing) * 80);
+  }
+  .harving-methods img {
+    margin: calc(var(--spacing) * 3) 0 calc(var(--spacing) * 2);
+    height: calc(var(--spacing) * 80);
+    object-fit: cover;
+  }
+}

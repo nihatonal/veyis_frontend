@@ -1,0 +1,38 @@
+src/
+|-- pages/
+|   |-- Home.jsx
+|   |-- Vineyards.jsx
+|   |-- VineyardDetail.jsx
+|   |-- InvestmentGuide.jsx
+|   |-- Process.jsx
+|   |-- Blog.jsx
+|   |-- Contact.jsx
+
+
+/ (Anasayfa)
+/bag-yatirimi
+  /bag-yatirimi
+  /bag-alim-sureci
+  /bag-isletme-sureci
+/satilik-uzum-baglari
+  /satilik-uzum-bagi-eregli
+  /satilik-uzum-bagi-cumra
+  /satilik-uzum-bagi-karapinar
+/hakkimizda
+/iletisim
+/blog
+  /konya-bag-yatirimi-2025
+  /konya-bag-isletme-rehberi
+  /konya-uzum-bagi-fiyatlari
+
+
+   Font Önerisi
+
+Başlıklar için: Playfair Display (Doğa ve prestij hissi)
+Metinler için: Inter veya Roboto (Okunaklı ve modern)
+
+
+doğru bakım ve yonetim ile üzüm bağları yıllarca size kazanç sağlayabilir.
+üzüm bağı yatırımı, sadece tarım sektöründe değil, aynı zamanda şarapçılık ve kuru üzüm gibi endüstrilerde de büyük potansiyele sahip.
+Piyasa da üzüm kg 250 -350 TL civarında. 1 metrekare üzüm bağı fiyatı bir kg üzüm fiyatına eş neredeyse.
+

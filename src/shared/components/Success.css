@@ -1,0 +1,21 @@
+.success_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: calc(var(--spacing) * 10) 0;
+  color: var(--color-stone-800);
+  font-weight: 600;
+}
+.success_wrapper h2 {
+  font-size: var(--text-xl);
+  margin: calc(var(--spacing) * 10) 0 calc(var(--spacing) * 2);
+}
+.success_wrapper p {
+  font-size: var(--text-sm);
+  color: var(--color-stone-500);
+  font-weight: normal;
+}
+.success_icon {
+  font-size: 156px;
+  color: var(--color-emerald-600);
+}

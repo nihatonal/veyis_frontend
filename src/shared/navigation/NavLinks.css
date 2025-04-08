@@ -1,0 +1,107 @@
+.navbar_items_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.nav_item {
+  font-size: var(--text-base);
+  padding: calc(var(--spacing) * 2) 0;
+  font-weight: 600;
+  transition: all 350ms;
+  color: var(--color-emerald-50);
+  position: relative;
+}
+.nav_item span {
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background-color: var(--color-teal-400);
+  bottom: 5px;
+  transition: all 0.3s;
+}
+.nav_item:nth-last-child(5) {
+  order: -1;
+}
+.nav_item:hover {
+  color: var(--color-teal-400);
+  /* text-decoration: underline;
+  text-underline-offset: calc(var(--spacing) * 2); */
+}
+.nav_item:hover span {
+  width: 100%;
+}
+.scrolled .nav_item {
+  color: var(--color-emerald-800);
+}
+.scrolled .nav_item:hover {
+  color: var(--color-emerald-500);
+}
+@media screen and (max-width: 980px) {
+  .navbar_items_wrapper {
+    flex-direction: column;
+  }
+  .nav_item {
+    font-size: var(--text-base);
+    padding: calc(var(--spacing) * 4) 0;
+  }
+}
+
+.navlink_item_btn_wrapper button {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  cursor: pointer;
+}
+.navlink_item_btn_wrapper button .nav_button_arrow {
+  margin-top: 4px;
+}
+.navlink_dropmenu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-neutral-50);
+  height: 0;
+  overflow: hidden;
+  transition: all 350ms;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.65);
+}
+.open_drop {
+  height: 100px;
+}
+.navlink_dropmenu a {
+  border-bottom: 1px solid var(--color-gray-300);
+  padding: calc(var(--spacing) * 1) calc(var(--spacing) * 2);
+}
+.navlink_dropmenu a:hover {
+  background: var(--color-stone-300);
+}
+.navlink_item span {
+  display: none;
+}
+@media screen and (max-width: 980px) {
+  .navlink_dropmenu {
+    position: static;
+    background-color: transparent;
+    height: auto;
+    overflow: visible;
+    box-shadow: none;
+  }
+  .navlink_dropmenu a {
+    border-bottom: none;
+    padding: calc(var(--spacing) * 1) calc(var(--spacing) * 2);
+  }
+  .navlink_dropmenu a:hover {
+    color: var(--color-teal-400);
+    background-color: transparent;
+  }
+  .nav_button_arrow {
+    display: none;
+  }
+  .navlink_dropmenu a span {
+    display: inline-block;
+    margin-right: 4px;
+  }
+}
+.active_link span {
+  width: 100%;
+}

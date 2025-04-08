@@ -1,0 +1,133 @@
+.hero_container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a; /* Yükleme sürecinde arkaplan rengi */
+  z-index: 50;
+  padding: 6rem 2rem;
+}
+
+.hero_container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Koyu overlay ekleyerek yazıları belirginleştir */
+  z-index: -1;
+}
+
+.hero_container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero_wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  color: #ffffff; /* Daha iyi kontrast için beyaz metin */
+  padding-top: 10rem;
+}
+
+.hero_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* .hero_title {
+  font-size: 4rem;
+  line-height: 1.2;
+  font-weight: 700;
+  font-family: "Playfair Display", Georgia, serif;
+  font-display: swap;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+} */
+.hero_title.priority {
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: "Playfair Display", Georgia, serif;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  display: block; /* Tarayıcıya hızlı render etmesini söyle */
+}
+.hero_subtitle {
+  margin-top: 1rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-display: swap;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Yazı gölgesi ile okunabilirliği artır */
+}
+
+.hero_buttons {
+  align-self: flex-start;
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.hero_button {
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--color-emerald-900);
+  border: 1px solid var(--color-stone-50);
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.315);
+  background-color: var(--color-stone-50);
+}
+
+.hero_button:hover {
+  background: transparent;
+  color: var(--color-stone-50);
+}
+
+@media screen and (max-width: 780px) {
+  .hero_wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 4rem;
+  }
+
+  .hero_title.priority {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: "Playfair Display", Georgia, serif;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    display: block; /* Tarayıcıya hızlı render etmesini söyle */
+  }
+
+  .hero_subtitle {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.75px;
+    line-height: 1.24;
+  }
+
+  .hero_buttons {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .hero_button {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+  }
+}

@@ -1,0 +1,92 @@
+.advantage_content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  row-gap: calc(var(--spacing) * 10);
+  margin-top: calc(var(--spacing) * 10);
+}
+
+.advantage_content_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: calc(var(--spacing) * 120);
+  border: 2px solid #8b5e3c;
+  padding: calc(var(--spacing) * 6) 0;
+  /* color: #7a5030; */
+  border-radius: calc(var(--spacing) * 4);
+}
+
+.advantage_content_item {
+  font-family: var(--font-desc);
+}
+.advantage_content_item span {
+  font-size: var(--text-6xl);
+  border-radius: var(--rounded-full);
+  border: 3px solid #8b5e3c;
+  width: calc(var(--spacing) * 30);
+  height: calc(var(--spacing) * 30);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: calc(var(--spacing) * 6);
+}
+.advantage_content_item:nth-last-child(1) span,
+.advantage_content_item:nth-last-child(1) {
+  color: var(--color-lime-800);
+  border-color: var(--color-lime-800);
+}
+.advantage_content_item:nth-last-child(2) span,
+.advantage_content_item:nth-last-child(2) {
+  color: var(--color-sky-800);
+  border-color: var(--color-sky-800);
+}
+.advantage_content_item:nth-last-child(3) span,
+.advantage_content_item:nth-last-child(3) {
+  color: var(--color-teal-700);
+  border-color: var(--color-teal-700);
+}
+.advantage_content_item:nth-last-child(4) span,
+.advantage_content_item:nth-last-child(4) {
+  color: #8b5e3c;
+  border-color: #8b5e3c;
+}
+.advantage_content_item h3 {
+  font-weight: 600;
+  font-size: var(--text-xl);
+  margin-bottom: calc(var(--spacing) * 2);
+  color: var(--color-gray-700);
+}
+.advantage_content_item p {
+  font-weight: 400;
+  font-size: var(--text-base);
+  color: var(--color-gray-600);
+  max-width: calc(var(--spacing) * 110);
+}
+@media screen and (max-width: 576px) {
+  .advantage_content {
+    row-gap: calc(var(--spacing) * 6);
+    margin-top: calc(var(--spacing) * 10);
+  }
+  .advantage_content_item {
+    min-width: auto;
+    width: 100%;
+    padding: calc(var(--spacing) * 4) 0;
+  }
+  .advantage_content_item span {
+    font-size: var(--text-4xl);
+    border: 2px solid #8b5e3c;
+    width: calc(var(--spacing) * 20);
+    height: calc(var(--spacing) * 20);
+    margin-bottom: calc(var(--spacing) * 3);
+  }
+  .advantage_content_item h3 {
+    font-size: var(--text-md);
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .advantage_content_item p {
+    font-weight: 400;
+    font-size: var(--text-xs);
+  }
+}

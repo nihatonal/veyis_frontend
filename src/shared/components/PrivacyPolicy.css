@@ -1,0 +1,6 @@
+/* mx-auto p-6 text-gray-800 */
+.policy_container {
+  padding: calc(var(--spacing) * 40) calc(var(--spacing) * 6)
+    calc(var(--spacing) * 20);
+  color: var(--color-gray-800);
+}

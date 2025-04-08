@@ -1,0 +1,83 @@
+#nav-icon {
+  display: none;
+  position: relative;
+  z-index: 99;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+.nav-icon {
+  transition: all 350ms;
+  cursor: pointer;
+}
+.nav-icon-input {
+  position: absolute;
+  cursor: pointer;
+  width: calc(var(--spacing) * 6);
+  height: calc(var(--spacing) * 6);
+  z-index: 10;
+  opacity: 0;
+}
+.nav-icon-item {
+  height: 3px;
+  width: calc(var(--spacing) * 4);
+  background-color: var(--color-emerald-50);
+  border-radius: 10px;
+  position: absolute;
+  transition: all 350ms;
+}
+.nav-icon-item:nth-last-child(2) {
+  top: calc(var(--spacing) * 2);
+  width: 100%;
+  right: 0;
+}
+.nav-icon-item:nth-last-child(1) {
+  top: calc(var(--spacing) * 4);
+  width: 100%;
+  width: calc(var(--spacing) * 6);
+}
+
+.open_menu .nav-icon-item:nth-last-child(3) {
+  width: 100%;
+  transform: rotate(135deg);
+  top: calc(var(--spacing) * 2);
+}
+.open_menu .nav-icon-item:nth-last-child(2) {
+  width: 100%;
+  right: calc(var(--spacing) * 8);
+  opacity: 0;
+  top: calc(var(--spacing) * 2);
+}
+.open_menu .nav-icon-item:nth-last-child(1) {
+  width: 100%;
+  transform: rotate(45deg);
+  top: calc(var(--spacing) * 2);
+}
+.nav-icon:hover .nav-icon-item {
+  width: 100%;
+}
+
+@media only screen and (max-width: 980px) {
+  #nav-icon {
+    width: 33px;
+    height: 23px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    display: block;
+    transform: scale(0.8);
+  }
+}
